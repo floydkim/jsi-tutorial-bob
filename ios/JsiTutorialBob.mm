@@ -1,18 +1,22 @@
 #import "JsiTutorialBob.h"
+#include "react-native-jsi-tutorial-bob.h" // Include the C++ header
 
 @implementation JsiTutorialBob
 RCT_EXPORT_MODULE()
 
 // Example method
 // See // https://reactnative.dev/docs/native-modules-ios
-RCT_EXPORT_METHOD(multiply:(double)a
-                  b:(double)b
-                  resolve:(RCTPromiseResolveBlock)resolve
-                  reject:(RCTPromiseRejectBlock)reject)
-{
-    NSNumber *result = @(jsitutorialbob::multiply(a, b));
-
-    resolve(result);
+// RCT_EXPORT_METHOD(multiply:(double)a
+//                   b:(double)b
+//                   resolve:(RCTPromiseResolveBlock)resolve
+//                   reject:(RCTPromiseRejectBlock)reject)
+// {
+//     NSNumber *result = @(jsitutorialbob::multiply(a, b));
+//
+//     resolve(result);
+// }
+RCT_EXPORT_BLOCKING_SYNCHRONOUS_METHOD(multiply:(double)a b:(double)b) {
+    return @(jsitutorialbob::multiply(a, b)); // Call the C++ function
 }
 
 // Don't compile this code when we build for the old architecture.

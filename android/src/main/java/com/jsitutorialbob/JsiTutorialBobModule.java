@@ -27,8 +27,12 @@ public class JsiTutorialBobModule extends JsiTutorialBobSpec {
 
   // Example method
   // See https://reactnative.dev/docs/native-modules-android
-  @ReactMethod
-  public void multiply(double a, double b, Promise promise) {
-    promise.resolve(nativeMultiply(a, b));
+//  @ReactMethod
+//  public void multiply(double a, double b, Promise promise) {
+//    promise.resolve(nativeMultiply(a, b));
+//  }
+  @ReactMethod(isBlockingSynchronousMethod = true)
+  public double multiply(double a, double b) {
+    return nativeMultiply(a, b);
   }
 }
