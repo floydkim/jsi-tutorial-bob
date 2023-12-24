@@ -15,8 +15,8 @@ RCT_EXPORT_MODULE()
 //
 //     resolve(result);
 // }
-RCT_EXPORT_BLOCKING_SYNCHRONOUS_METHOD(multiply:(double)a b:(double)b) {
-    return @(jsitutorialbob::multiply(a, b)); // Call the C++ function
+RCT_EXPORT_BLOCKING_SYNCHRONOUS_METHOD(add:(double)a b:(double)b) {
+    return @(jsitutorialbob::add(a, b)); // Call the C++ function
 }
 
 // Don't compile this code when we build for the old architecture.

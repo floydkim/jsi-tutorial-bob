@@ -24,6 +24,6 @@ const JsiTutorialBob = JsiTutorialBobModule
       }
     );
 
-export function multiply(a: number, b: number): number {
-  return JsiTutorialBob.multiply(a, b);
+export function add(a: number, b: number): number {
+  return JsiTutorialBob.add(a, b);
 }
