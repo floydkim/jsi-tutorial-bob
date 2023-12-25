@@ -11,11 +11,11 @@ npm install react-native-jsi-tutorial-bob
 ## Usage
 
 ```js
-import { multiply } from 'react-native-jsi-tutorial-bob';
+import { add } from 'react-native-jsi-tutorial-bob';
 
 // ...
 
-const result = await multiply(3, 7);
+const result = await add(3, 7);
 ```
 
 ## Contributing
