@@ -3,6 +3,6 @@
 
 extern "C"
 JNIEXPORT jdouble JNICALL
-Java_com_jsitutorialbob_JsiTutorialBobModule_nativeMultiply(JNIEnv *env, jclass type, jdouble a, jdouble b) {
-    return jsitutorialbob::multiply(a, b);
+Java_com_jsitutorialbob_JsiTutorialBobModule_nativeAdd(JNIEnv *env, jclass type, jdouble a, jdouble b) {
+    return jsitutorialbob::add(a, b);
 }

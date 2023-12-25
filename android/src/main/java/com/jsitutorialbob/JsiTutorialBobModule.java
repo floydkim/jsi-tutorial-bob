@@ -23,7 +23,7 @@ public class JsiTutorialBobModule extends JsiTutorialBobSpec {
     System.loadLibrary("react-native-jsi-tutorial-bob");
   }
 
-  public static native double nativeMultiply(double a, double b);
+  public static native double nativeAdd(double a, double b);
 
   // Example method
   // See https://reactnative.dev/docs/native-modules-android
@@ -32,7 +32,7 @@ public class JsiTutorialBobModule extends JsiTutorialBobSpec {
 //    promise.resolve(nativeMultiply(a, b));
 //  }
   @ReactMethod(isBlockingSynchronousMethod = true)
-  public double multiply(double a, double b) {
-    return nativeMultiply(a, b);
+  public double add(double a, double b) {
+    return nativeAdd(a, b);
   }
 }
