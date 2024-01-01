@@ -27,3 +27,7 @@ const JsiTutorialBob = JsiTutorialBobModule
 export function add(a: number, b: number): number {
   return JsiTutorialBob.add(a, b);
 }
+
+export function getDeviceModel(): string {
+  return JsiTutorialBob.getDeviceModel();
+}

@@ -4,6 +4,7 @@ import { TurboModuleRegistry } from 'react-native';
 export interface Spec extends TurboModule {
   // multiply(a: number, b: number): Promise<number>;
   add(a: number, b: number): number;
+  getDeviceModel(): string;
 }
 
 export default TurboModuleRegistry.getEnforcing<Spec>('JsiTutorialBob');
